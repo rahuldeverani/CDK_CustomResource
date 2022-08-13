@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import * as cdk from 'aws-cdk-lib';
-import { Custom12Stack } from '../lib/custom12-stack';
+import { MyStack } from '../lib/custom12-stack';
 
+const env ={account :'1xxxxxxx' , region: 'us-east-1'}
 const app = new cdk.App();
-new Custom12Stack(app, 'Custom12Stack');
+new MyStack(app, 'Customstack' ,{env:env});
